@@ -35,10 +35,11 @@ public class Operators {
         String val = ((x % 2 == 0) ? "par" : "impar");
         System.out.println("val: " + val);
 
-        // pasarea arg prin valoare
+
 
     }
 
+    // pasarea arg prin valoare
     public int f(int z) {
         return z++;
     }
