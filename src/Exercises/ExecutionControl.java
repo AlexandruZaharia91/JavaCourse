@@ -14,6 +14,7 @@ public class ExecutionControl {
         buclaFor(elemente);
         buclaWhile(8);
         doWhileMethid(5);
+        buclaFor(2,3);
 
     }
 
@@ -104,13 +105,24 @@ public class ExecutionControl {
         }
     }
 
+    public static void buclaFor(int x, int y) {
+        for(int i = 0;i<5;i++) {
+            System.out.println("i: " + i);
+            if(i == x) {
+                continue;
+            }else if(i == y) {
+                break;
+            }
+        }
+    }
+
     public static void buclaWhile(int a) {
         int i = 0;
         while(i< a) {
             System.out.println("i : " + i);
             if(i == 5) {
                 System.out.println("Hello");
-            }else if(i> 7) {
+            }else if(i> 6) {
                 break;
             }
             i++;
