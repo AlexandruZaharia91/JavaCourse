@@ -66,8 +66,6 @@ public class InputKeyboard {
         //acesta este un comentariu
         System.out.println("Primul comentariu");
 
-
-
         /* codul acesta va fi ignorat de java fara sa afecteze compilarea
        programului Java */
         System.out.println();
