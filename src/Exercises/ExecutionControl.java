@@ -13,9 +13,8 @@ public class ExecutionControl {
         buclaFor(10);
         buclaFor(elemente);
         buclaWhile(8);
-        doWhileMethid(5);
+        doWhileMethod(5);
         buclaFor(2,3);
-
     }
 
 
@@ -27,7 +26,6 @@ public class ExecutionControl {
         } else {
             System.out.println("b > a: " + b);
         }
-
     }
 
 
@@ -88,7 +86,6 @@ public class ExecutionControl {
                 System.out.println("val default : Alb");
                 break;
         }
-
     }
 
 
@@ -130,11 +127,18 @@ public class ExecutionControl {
     }
 
 
-    public static void doWhileMethid(int val) {
+    public static void doWhileMethod(int val) {
         do{
             System.out.println("Hello world");
             val--;
         }while(val >0);
-
     }
+
+
+
+
+
+
+
+
 }
