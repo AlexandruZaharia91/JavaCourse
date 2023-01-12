@@ -4,24 +4,18 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class BirdWatcher {
-    private final int[] birdsPerDay;
 
-
-    public BirdWatcher(int[] birdsPerDay) {
-        this.birdsPerDay = birdsPerDay.clone();
-    }
 
     public static void main(String[] args) {
         int[] birdsPerDay = {2, 5, 0, 7, 4, 1};
-        BirdWatcher birds = new BirdWatcher(birdsPerDay);
+        BirdWatcher birds = new BirdWatcher();
         System.out.println("get last week birds: " + Arrays.toString(birds.getLastWeek()));
-        System.out.println("number of birds for today: " + birds.getToday());
-        System.out.println("number of birs before update: " + Arrays.toString(birds.birdsPerDay));
-        birds.incrementTodaysCount();
-        System.out.println("add a new bird for today: " + Arrays.toString(birds.birdsPerDay));
-        System.out.println("days without birds: " + birds.hasDayWithoutBirds());
-        System.out.println("number of birds for 4 days: " + birds.getCountForFirstDays(4));
-        System.out.println("days with 5 or more than 5 birds per day: " + birds.getBusyDays());
+        System.out.println("number of birds for today: " + birds.getToday(birdsPerDay));
+        System.out.println("number of birs before update: " + Arrays.toString(birdsPerDay));
+        birds.incrementTodaysCount(birdsPerDay);
+        System.out.println("days without birds: " + birds.hasDayWithoutBirds(birdsPerDay));
+        System.out.println("number of birds for 4 days: " + birds.getCountForFirstDays(4, birdsPerDay));
+        System.out.println("days with 5 or more than 5 birds per day: " + birds.getBusyDays(birdsPerDay));
     }
 
     public int[] getLastWeek() {
@@ -29,7 +23,7 @@ public class BirdWatcher {
         return getLastWeekBirds;
     }
 
-    public int getToday() {
+    public int getToday(int[] birdsPerDay) {
         int birdNumberToday = 0;
         for (int i = 0; i < birdsPerDay.length; i++) {
             if (i == birdsPerDay.length - 1) {
@@ -40,16 +34,16 @@ public class BirdWatcher {
     }
 
 
-    public void incrementTodaysCount() {
-        Random rnd = new Random();
-        int day = rnd.nextInt(5);
-        if (day == 0) {
-            day = day + 1;
-        }
-        birdsPerDay[day] = birdsPerDay[day] + 1;
+    public void incrementTodaysCount(int[] birdsPerDay) {
+       for(int i = 0; i< birdsPerDay.length;i++){
+           if(i == birdsPerDay.length - 1) {
+               birdsPerDay[i] = birdsPerDay[i] + 1;
+           }
+       }
+        System.out.println("birds per day after update: " + Arrays.toString(birdsPerDay));
     }
 
-    public boolean hasDayWithoutBirds() {
+    public boolean hasDayWithoutBirds(int[] birdsPerDay) {
         boolean dayswithoutBirds = false;
         for (int i = 0; i < birdsPerDay.length; i++) {
             if (birdsPerDay[i] == 0) {
@@ -60,7 +54,7 @@ public class BirdWatcher {
     }
 
 
-    public int getCountForFirstDays(int days) {
+    public int getCountForFirstDays(int days, int[] birdsPerDay) {
         int i = 0;
         int getNumberOfBirds = 0;
         while (i < days) {
@@ -70,7 +64,7 @@ public class BirdWatcher {
         return getNumberOfBirds;
     }
 
-    public int getBusyDays() {
+    public int getBusyDays(int[] birdsPerDay) {
         int count = 0;
         for (int i = 0; i < birdsPerDay.length; i++) {
             if (birdsPerDay[i] >= 5) {
