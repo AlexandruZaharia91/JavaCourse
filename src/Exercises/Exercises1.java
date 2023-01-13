@@ -1,24 +1,23 @@
 package Exercises;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.Math.pow;
 
-public class Exercises {
+public class Exercises1 {
 
 
     public static void main(String[] args) {
-        Exercises test = new Exercises();
+        Exercises1 test = new Exercises1();
         Scanner scanner = new Scanner(System.in);
 
-//        test.reverseDigits(scanner.nextInt());
-//        test.palindrom(scanner.next());
+        test.reverseDigits(scanner.nextInt());
+        test.palindrom(scanner.next());
         test.largestNumber(230,13,11);
-//        test.factorial(10);
-//        for(int i = 0;i<1000;i++) {
-//            test.armstrongNumber(i);
-//        }
+        test.factorial(10);
+        for(int i = 0;i<1000;i++) {
+            test.armstrongNumber(i);
+        }
 
 
     }
