@@ -1,5 +1,6 @@
 package Exercises;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.Math.pow;
@@ -36,14 +37,14 @@ public class Exercises1 {
 
     public void palindrom(String val) {
         char[] elemente = val.toCharArray();
-        String newVal = "";
+        String[] newVal = new String[elemente.length];
 
         for(int i = elemente.length-1; i>=0; i--) {
-            newVal = newVal + elemente[i];
+            newVal[i] = newVal[i] + elemente[i];
         }
 
-        if(val.equals(newVal)) {
-            System.out.println("este palindrom " + val + "----" + newVal);
+        if(val.equals(Arrays.toString(newVal))) {
+            System.out.println("este palindrom " + val + "----" + Arrays.toString(newVal));
         }else{
             System.out.println("nu este palindrom");
         }
@@ -80,7 +81,7 @@ public class Exercises1 {
     public void armstrongNumber(int number) {
         int temp = number;
         int[] elements = new int[10];
-        int rest = 0;
+        int rest;
         int sum = 0;
 
         for(int i = 0; temp >0;i++) {
@@ -89,8 +90,8 @@ public class Exercises1 {
             temp = temp/10;
         }
 
-        for(int j = 0; j<elements.length;j++) {
-            sum = (int) (sum + pow(elements[j], 3));
+        for (int element : elements) {
+            sum = (int) (sum + pow(element, 3));
         }
 
         if(number == sum) {
