@@ -10,18 +10,18 @@ public class Exercises1 {
 
     public static void main(String[] args) {
         Exercises1 test = new Exercises1();
-        Armstrong  numbers = new Armstrong();
-        Scanner scanner = new Scanner(System.in);
+//        Armstrong  numbers = new Armstrong();
+//        Scanner scanner = new Scanner(System.in);
+//
+//        test.reverseDigits(scanner.nextInt());
+//        test.palindrom(scanner.next());
+//        test.largestNumber(230,13,11);
+//        test.factorial(10);
+//        for(long i = 0;i<1000000000000L;i++) {
+//            numbers.armstrongNumber(i);
+//        }
 
-        test.reverseDigits(scanner.nextInt());
-        test.palindrom(scanner.next());
-        test.largestNumber(230,13,11);
-        test.factorial(10);
-        for(long i = 0;i<1000000000000L;i++) {
-            numbers.armstrongNumber(i);
-        }
-
-        test.primNumber(test.elements(100));
+        test.primeNumber(100);
     }
 
 
@@ -38,7 +38,7 @@ public class Exercises1 {
     }
 
     /*
-     * Check Given No is palindrome or Not in java Program
+     * Check Given String is palindrome or Not in java Program
      * */
     public void palindrom(String val) {
         char[] elemente = val.toCharArray();
@@ -90,6 +90,24 @@ public class Exercises1 {
     /*
      * Print prime no Program in java
      * */
+
+    public void primeNumber(int number) {
+
+        for(int i = 2;i<=number;i++) {
+            int count  = 0;
+            for(int j = 1; j<=i;j++) {
+                if(i%j == 0) {
+                    count++;
+                }
+
+            }
+            if(count == 2) {
+                System.out.println("este numar prim " + i);
+            }else {
+                System.out.println("nu este numar prim " + i);
+                    }
+        }
+    }
 
 
 }
