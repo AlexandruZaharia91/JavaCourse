@@ -13,15 +13,15 @@ public class Exercises1 {
         Armstrong  numbers = new Armstrong();
         Scanner scanner = new Scanner(System.in);
 
-//        test.reverseDigits(scanner.nextInt());
-//        test.palindrom(scanner.next());
-//        test.largestNumber(230,13,11);
-//        test.factorial(10);
+        test.reverseDigits(scanner.nextInt());
+        test.palindrom(scanner.next());
+        test.largestNumber(230,13,11);
+        test.factorial(10);
         for(long i = 0;i<1000000000000L;i++) {
             numbers.armstrongNumber(i);
         }
 
-//        test.primNumber(test.elements(100));
+        test.primNumber(test.elements(100));
     }
 
 
@@ -90,25 +90,8 @@ public class Exercises1 {
     /*
      * Print prime no Program in java
      * */
-    public int[] elements(int maxim) {
-        int[] numbers = new int[maxim + 1];
-        for (int i = 0; i <= maxim; i++) {
-            numbers[i] = i;
-        }
-        return numbers;
-    }
 
 
-//    public void primNumber(int[] numbers) {
-//        for (int j = 0; j < numbers.length; j++) {
-//            if(x==x) {
-//                System.out.println("numerele prime sunt: " + numbers[j]);
-//            }
-//        }
-//    }
-//
-//        }
-//    }
 }
 
 
