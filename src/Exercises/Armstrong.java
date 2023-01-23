@@ -21,7 +21,7 @@ public class Armstrong {
      * */
     public void armstrongNumber(long number) {
         long  temp = number;
-        long[] elements = new long[10];
+        long[] elements = new long[20];
         long rest;
         long sum = 0;
         for (int i = 0; temp > 0; i++) {
@@ -38,9 +38,9 @@ public class Armstrong {
             System.out.println("este numar Armstrong: " + number);
 
         }
-//        else {
-//            System.out.println("nu este numar Armstrong");
-//        }
+        else {
+            System.out.println("nu este numar Armstrong");
+        }
 
     }
 }

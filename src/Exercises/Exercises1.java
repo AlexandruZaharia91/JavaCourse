@@ -3,25 +3,23 @@ package Exercises;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static java.lang.Math.pow;
 
 public class Exercises1 {
 
 
     public static void main(String[] args) {
         Exercises1 test = new Exercises1();
-//        Armstrong  numbers = new Armstrong();
-//        Scanner scanner = new Scanner(System.in);
-//
-//        test.reverseDigits(scanner.nextInt());
-//        test.palindrom(scanner.next());
-//        test.largestNumber(230,13,11);
-//        test.factorial(10);
-//        for(long i = 0;i<1000000000000L;i++) {
-//            numbers.armstrongNumber(i);
-//        }
+        Armstrong  numbers = new Armstrong();
+        Scanner scanner = new Scanner(System.in);
 
-        test.primeNumber(100);
+        test.reverseDigits(scanner.nextInt());
+        test.palindrom(scanner.next());
+        test.largestNumber(230,13,11);
+        test.factorial(10);
+        for(long i = 0;i<1000000000000L;i++) {
+            numbers.armstrongNumber(i);
+        }
+        test.primeNumber(300);
     }
 
 
@@ -108,8 +106,6 @@ public class Exercises1 {
                     }
         }
     }
-
-
 }
 
 
