@@ -4,8 +4,6 @@ import static java.lang.Math.pow;
 
 public class Armstrong {
 
-
-
     public int riseOfPowef(long number) {
         int riseOfPower = 0;
         while(number>0) {

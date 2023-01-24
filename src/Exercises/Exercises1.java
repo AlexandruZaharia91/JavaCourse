@@ -74,6 +74,7 @@ public class Exercises1 {
         }
     }
 
+
     /*
      * Find factorial for given no Program in Java
      * */
@@ -85,10 +86,10 @@ public class Exercises1 {
         System.out.println("" + number + " factorial = " + factorial);
     }
 
+
     /*
      * Print prime no Program in java
      * */
-
     public void primeNumber(int number) {
 
         for(int i = 2;i<=number;i++) {
