@@ -17,7 +17,6 @@ public class HomeworkPart1 {
         System.out.println(sentence + " cu variabila sentence in printare");
     }
 
-
     //exercise 2
     public static void displaySentences() {
         //afiseaza propozitia “Cursul acesta este foarte fain!” de 6 ori
