@@ -14,12 +14,12 @@ public class BirdWatcher {
         System.out.println("number of birs before update: " + Arrays.toString(birdsPerDay));
         birds.incrementTodaysCount(birdsPerDay);
         System.out.println("days without birds: " + birds.hasDayWithoutBirds(birdsPerDay));
-        System.out.println("number of birds for 4 days: " + birds.getCountForFirstDays(4, birdsPerDay));
+        System.out.println("number of birds for 4 days: " + birds.getCountForFirstDays(14, birdsPerDay));
         System.out.println("days with 5 or more than 5 birds per day: " + birds.getBusyDays(birdsPerDay));
     }
 
     public int[] getLastWeek() {
-        int[] getLastWeekBirds = {3, 2, 4, 1, 5, 10, 2};
+        int[] getLastWeekBirds = {0, 2, 5, 3, 7, 8, 4};
         return getLastWeekBirds;
     }
 
@@ -58,7 +58,12 @@ public class BirdWatcher {
         int i = 0;
         int getNumberOfBirds = 0;
         while (i < days) {
-            getNumberOfBirds = getNumberOfBirds + birdsPerDay[i];
+            if(i < birdsPerDay.length) {
+                getNumberOfBirds = getNumberOfBirds + birdsPerDay[i];
+            }else {
+                break;
+            }
+
             i++;
         }
         return getNumberOfBirds;
