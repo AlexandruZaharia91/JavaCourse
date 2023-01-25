@@ -1,11 +1,11 @@
-package OptionalExercisesPart2;
+package BigExercises;
 
 public class BlackJack {
 
 
     public static void main(String[] args) {
         BlackJack game = new BlackJack();
-        System.out.println(game.firstTurn("six", "six", "eight"));
+        System.out.println(game.firstTurn("ace", "ace", "eight"));
     }
 
 
@@ -41,7 +41,11 @@ public class BlackJack {
     }
 
     public boolean isBlackJack(String card1, String card2) {
-        return (parseCard(card1) + parseCard(card2)) == 21;
+        boolean isblackJack = false;
+        if((parseCard(card1) + parseCard(card2)) == 21) {
+            isblackJack = true;
+        }
+        return isblackJack;
     }
 
 
@@ -49,6 +53,8 @@ public class BlackJack {
         String value = "S";
         if (isBlackjack && dealerScore != 11 && dealerScore != 10) {
             value = "W";
+        }else if(!(isBlackjack)) {
+            value = "P";
         }
         return value;
     }

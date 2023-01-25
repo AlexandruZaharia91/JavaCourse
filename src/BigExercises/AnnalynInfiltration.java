@@ -1,4 +1,4 @@
-package OptionalExercisesPart2;
+package BigExercises;
 
 public class AnnalynInfiltration {
     boolean free = false;
@@ -9,7 +9,7 @@ public class AnnalynInfiltration {
         System.out.println("fast attack: " + infiltration.canFastAttack(true));
         System.out.println("spy: " + infiltration.canSpy(true, false, false));
         System.out.println("signal prisoner: " + infiltration.canSignalPrisoner(false, false));
-        System.out.println("prisoner can be free: " + infiltration.canFreePrisoner(true, false, false, true));
+        System.out.println("prisoner can be free: " + infiltration.canFreePrisoner(false, false, false, true));
 
     }
 
@@ -27,9 +27,9 @@ public class AnnalynInfiltration {
 
     public boolean canFreePrisoner(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
 
-        if ((petDogIsPresent && knightIsAwake) && !archerIsAwake) {
+        if (petDogIsPresent && !archerIsAwake) {
             free = true;
-        } else if (prisonerIsAwake && !archerIsAwake) {
+        } else if (prisonerIsAwake && !archerIsAwake && !knightIsAwake) {
             free = true;
         }
         return free;

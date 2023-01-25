@@ -1,4 +1,4 @@
-package Exercises;
+package BigExercises;
 
 import static java.lang.Math.pow;
 

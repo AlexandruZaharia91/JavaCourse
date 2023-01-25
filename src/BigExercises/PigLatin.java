@@ -1,4 +1,4 @@
-package OptionalExercisesPart2;
+package BigExercises;
 
 public class PigLatin {
     final char[] vowel = {'a', 'e', 'i', 'o', 'u', 'ă', 'î'};
