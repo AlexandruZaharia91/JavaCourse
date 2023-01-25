@@ -1,4 +1,4 @@
-package BigExercises;
+package BigExercises.Cars;
 
 public class CarFunction {
     public int batteryPercentage = 100;

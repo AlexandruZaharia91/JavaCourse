@@ -1,4 +1,4 @@
-package BigExercises;
+package BigExercises.Cars;
 
 public class DisplayRC {
     private final String brandRemoteCar;

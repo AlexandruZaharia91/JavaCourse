@@ -42,7 +42,9 @@ public class PrimeNumber {
     }
 
     /*
-     * Print prime with x position
+     * Given a number n, determine what the nth prime is.
+
+        By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
      * */
     public Integer primeNumberPosit(long number, int positions) {
         if (positions <= 0) {
