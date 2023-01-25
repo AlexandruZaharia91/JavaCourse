@@ -1,4 +1,4 @@
-package OptionalExercisesPart2;
+package BigExercises;
 
 public class BlackJack {
 

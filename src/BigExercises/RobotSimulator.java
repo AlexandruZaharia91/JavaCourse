@@ -1,4 +1,4 @@
-package OptionalExercisesPart2;
+package BigExercises;
 
 public class RobotSimulator {
     public int[][] positions = new int[5][5];

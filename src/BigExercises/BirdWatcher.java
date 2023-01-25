@@ -1,7 +1,6 @@
-package OptionalExercisesPart2;
+package BigExercises;
 
 import java.util.Arrays;
-import java.util.Random;
 
 public class BirdWatcher {
 
