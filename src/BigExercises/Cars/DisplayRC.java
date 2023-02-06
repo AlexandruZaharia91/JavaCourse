@@ -12,16 +12,22 @@ public class DisplayRC {
     public static void main(String[] args) {
         DisplayRC toy = new DisplayRC();
         System.out.println("Toy's Brand: " + toy.getBrand());
-        int i = 100;
-        while (i > 0) {
+        System.out.println(toy.batteryValue());
+        while(toy.batteryValue() >0){
             toy.driveToy();
-            i--;
         }
-        toy.driveToy();
+        if(toy.batteryValue() == 0){
+            toy.driveToy();
+        }
+
     }
 
     public String getBrand() {
         return this.brandRemoteCar;
+    }
+
+    public int batteryValue() {
+        return function.batteryPercentage;
     }
 
     public void driveToy() {
@@ -37,4 +43,6 @@ public class DisplayRC {
             System.out.println("No distance available, low battery");
         }
     }
+
+
 }
