@@ -12,7 +12,7 @@ public class InputKeyboard {
         String[] elem = new String[5];
         int i = 0;
         int j = 0;
-        File text = new File("/Users/alzaharia/Documents/Personale/Section2/QA_Automation/src/DataInput");
+        File text = new File("E://QA Automation//JavaCourse//src//DataInput");
         Scanner input = new Scanner(text);
         Scanner inputKeyboard = new Scanner(System.in);
 
@@ -23,16 +23,21 @@ public class InputKeyboard {
 
         System.out.println("suma elementelor din fisierul DataInput este: " + sum(values));
 
-        System.out.print("scrie ceva la tastatura: ");
-        System.out.println(inputKeyboard(inputKeyboard.nextLine()));
+//        System.out.print("scrie ceva la tastatura: ");
+//        int val = inputKeyboard.nextInt();
+//        System.out.println(val);
 
         while (j < elem.length) {
             System.out.print("adauga val de la tastatura: ");
             elem[j] = inputKeyboard.next();
             j++;
         }
-        multiplication(elem);
+        suma(elem);
     }
+
+
+
+
 
     /**
      *  aceasta metoda va returna un String alcatuit dintr-o propozitie si parametru input
@@ -46,22 +51,31 @@ public class InputKeyboard {
     /**
      *  aceasta metoda calculeaza suma tuturor elementelor dintr-un array de int
      * @param a - data type int[]
-     * @return - returneaza variabila sum
+     * @return - returneaza variabila sum de tip int
      */
     public static int sum(int[] a) {
         int sum = 0;
-        for (int j : a) {
-            sum = sum + j;
+        int i = 0;
+        for(;i< a.length;i++) {
+            sum = sum + a[i];
         }
+//        for (int j : a) {
+//            sum = sum + j;
+//        }
         return sum;
     }
 
-    public static void multiplication(String[] inputs) {
-        int multipli = 0;
-        for (String elem : inputs) {
-            multipli = Integer.parseInt(elem) + multipli;
+    /**
+     *
+     * @param inputs data type String[]
+     * @return - dat type void
+     */
+    public static void suma(String[] inputs) {
+        int sum = 0;
+        for (int i = 0; i< inputs.length;i++) {
+            sum = Integer.parseInt(inputs[i]) + sum;
         }
-        System.out.println("multiplication: " + multipli);
+        System.out.println("sum: " + sum);
 
         //acesta este un comentariu
         System.out.println("Primul comentariu");

@@ -9,7 +9,6 @@ public class VerificareCNP {
     }
 
 
-
     public String checkCNP(String number) throws Exception {
         int suma = 0;
         int cifraControl = 0;

@@ -1,19 +1,24 @@
 package Exercises;
 
 
+import java.util.ArrayList;
+
 public class ExecutionControl {
 
 
     public static void main(String[] args) {
+        ExecutionControl ctrl = new ExecutionControl();
+
         String[] elemente = {"Ianuarie", "Februarie", "Martie", "Aprilie,", "Mai", "Iunie", "Iulie"};
-        ifMethod(3, 2);
-        switchMethod('b');
+        ifMethod(3, 5);
+        switchMethod('g');
         switchMethod(3);
         buclaFor(10);
         buclaFor(elemente);
         buclaWhile(8);
         doWhileMethod(5);
         buclaFor(2,3);
+
     }
 
 
@@ -21,7 +26,7 @@ public class ExecutionControl {
         if (a > b) {
             System.out.println("a > b : " + a);
         } else if (a == b) {
-            System.out.println("a == b" + a + " si " + b);
+            System.out.println("a == b " + a + " si " + b);
         } else {
             System.out.println("b > a: " + b);
         }
@@ -54,7 +59,7 @@ public class ExecutionControl {
                 break;
             default:
                 System.out.println("val default : Alb");
-                break;
+
         }
     }
 
@@ -83,7 +88,7 @@ public class ExecutionControl {
                 break;
             default:
                 System.out.println("val default : Alb");
-                break;
+
         }
     }
 
@@ -105,7 +110,7 @@ public class ExecutionControl {
         for(int i = 0;i<5;i++) {
             System.out.println("i: " + i);
             if(i == x) {
-                continue;
+                System.out.println("Hello");
             }else if(i == y) {
                 break;
             }
@@ -116,9 +121,9 @@ public class ExecutionControl {
         int i = 0;
         while(i< a) {
             System.out.println("i : " + i);
-            if(i == 5) {
+            if(i == 4) {
                 System.out.println("Hello");
-            }else if(i> 6) {
+            }else if(i> 5) {
                 break;
             }
             i++;
@@ -130,14 +135,11 @@ public class ExecutionControl {
         do{
             System.out.println("Hello world");
             val--;
-        }while(val >0);
+        }while(val >1);
+
     }
 
-
-
-
-
-
-
-
+    public void salut() {
+        System.out.println("salut alex");
+    }
 }
