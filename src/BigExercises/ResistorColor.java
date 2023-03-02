@@ -6,7 +6,7 @@ public class ResistorColor {
 
     public static void main(String[] args) {
         ResistorColor resistor = new ResistorColor();
-        //System.out.println( resistor.resistorValue(new String[]{"Red", "Yellow", "Orange", ""}));
+        System.out.println( resistor.resistorValue(new String[]{"Red", "Yellow", "Orange", ""}));
         System.out.println("second varinat --- " + resistor.numericValueResistorV1(new String[] { "brown", "black" }));
     }
 

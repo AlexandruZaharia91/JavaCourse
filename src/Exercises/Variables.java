@@ -51,7 +51,6 @@ public class Variables {
 
         System.out.println("cursorul se va duce pe o noua linie");
         System.out.print("cursorul ramane pe pozitia curenta");
-
         System.out.println("\n\n");
         System.out.println("Expresii multiple: " + this.reviste + "-----" + (this.carti + this.reviste) + "------" + this.check);
 

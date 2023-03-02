@@ -28,7 +28,7 @@ public class FootballMatchReports {
             case 11:
                 return "right wing";
             default:
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("nu se gaseste numarul");
         }
     }
 }
