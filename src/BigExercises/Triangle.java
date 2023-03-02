@@ -31,7 +31,7 @@ public class Triangle {
         }else if(triangle.isoscelesTriangle()){
             System.out.println("este isoscel:" + triangle.isoscelesTriangle());
         }else if(triangle.scaleneTriangle()){
-            System.out.println("este oarecare: " + triangle.scaleneTriangle());
+            System.out.println("este scalene: " + triangle.scaleneTriangle());
         }else {
             System.out.println("este degenerate triangle: " + triangle.degenerateTriangle());
         }
